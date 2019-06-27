@@ -1,0 +1,19 @@
+server:
+  port: 80
+  servlet:    context-path: /
+#配置数据源 
+spring:  datasource:    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: root
+    
+mybatis:
+    #加载映射文件,生成mapper代理类  mapper-locations: classpath:/mybatis/mappers/*.xml
+    #定义返回值类型公共的部分
+  type-aliases-package: com.jt.pojo
+    #开启驼峰命名法
+ #(例如我们平时在使用ORM映射属性的时候字段名为"user_id",而我们类属性名为"userId",
+  #当我们开启驼峰命名法后,"user_id"字段名会在内存中转换为"userId",使映射成功)
+  configuration:    map-underscore-to-camel-case: true
+  
