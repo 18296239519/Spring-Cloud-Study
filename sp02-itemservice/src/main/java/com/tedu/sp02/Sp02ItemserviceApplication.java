@@ -8,7 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @SpringBootApplication
 public class Sp02ItemserviceApplication {
 
-	//打算打打
+	//大萨达撒
 	//此时啊啊 
 	public static void main(String[] args) {
 		SpringApplication.run(Sp02ItemserviceApplication.class, args);
